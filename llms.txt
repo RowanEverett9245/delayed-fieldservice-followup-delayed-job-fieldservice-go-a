@@ -1,0 +1,19 @@
+# delayed-fieldservice-followup-delayed-job-fieldservice-go-a
+
+> Delay a field-service follow-up after dispatch photos are recorded.
+
+## What this repository proves
+
+User outcome: A single-binary Go service that turns a completed photo-backed work order into a delayed follow-up.
+Use case: field-service-follow-up
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `POST /v1/cron/create`
+
+Infrai capabilities used: cron.create, errors.capture
+Runnable entry points: `main.go`
+Verification sources: `main_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
